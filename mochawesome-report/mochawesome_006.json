@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-06-05T11:33:52.165Z",
+    "end": "2020-06-05T11:37:42.641Z",
+    "duration": 230476,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "281456ad-6c0f-49ab-97f3-818880d84c2a",
+      "title": "",
+      "fullFile": "cypress\\integration\\Examples\\Test.js",
+      "file": "cypress\\integration\\Examples\\Test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "af619b36-0ac6-43af-9996-67f86b771b31",
+          "title": "Flight Ticket Booking",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify User can Login and Logout",
+              "fullTitle": "Flight Ticket Booking Verify User can Login and Logout",
+              "timedOut": null,
+              "duration": 45163,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"D:/Cypress_Project/cypress/screenshots/Examples\\\\Test.js/Flight Ticket Booking -- Verify User can Login and Logout (failed).png\"",
+              "code": "var loginpage = new _Loginpage[\"default\"](); //const encr = new Encrypt()\ncy.visit(Cypress.env(\"url\")); //console.log(encr.encrypt())\ncy.hoveroverelement(loginpage.LoginElement());\ncy.clickobject(loginpage.MemberLogin());\ncy.modify_dom_attribute(loginpage.Emailbox(), 'class', 'wHuge4s2 country-mobile country-mobile-login required isEmailInput error').wait(1000).type(this.data.email, {\n  log: false\n});\ncy.entervalue(loginpage.Passwordbox(), this.data.password);\ncy.modify_dom_attribute('form#SkySales', 'target', '_Self'); //cy.get('form#SkySales').invoke('attr','target','_Self')\ncy.clickobject(loginpage.Loginbutton());\ncy.clickobject(loginpage.Logoutbutton());",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'get_Wrapper' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'get_Wrapper' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at AjaxControlToolkit.TextBoxWatermarkBehavior.set_WatermarkText (https://www.spicejet.com/ScriptResource.axd?d=bzTBMT5HsNVzhM55XKi9E6UvVOcYXMHBMZ5CLcFs-oQlk2bXU5ei01wGlcs3uRG96L9peacfYhvcVfIv5TZlMMl9VHqvaMNgMFkscKFwkKzwamwzfAHRtbTFXiHYifv0x5h7hxuZXXUdz-nHGxaV3E5OMi-g2p-lQqWL9wb4kA12nNRi0&t=3169528:300:51)\n    at Sys$Component$_setProperties (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:54456)\n    at Sys.Component.create (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:54944)\n    at Array.<anonymous> (https://www.spicejet.com/:4202:5)\n    at https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:51370\n    at Sys._Application._raiseInit (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:72277)\n    at Sys._Application.initialize (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:69772)\n    at b (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:71512)\n    at HTMLDocument.a (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:71786)",
+                "diff": null
+              },
+              "uuid": "0172736d-78b1-4c32-8148-61b93315571a",
+              "parentUUID": "af619b36-0ac6-43af-9996-67f86b771b31",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Flights Availability and Fares in between Two Places",
+              "fullTitle": "Flight Ticket Booking Check Flights Availability and Fares in between Two Places",
+              "timedOut": null,
+              "duration": 1635,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"D:/Cypress_Project/cypress/screenshots/Examples\\\\Test.js/Flight Ticket Booking -- Check Flights Availability and Fares in between Two Places (failed).png\"",
+              "code": "var homepage = new _Homepage[\"default\"]();\nvar choosefare = new _Flightselectionpage[\"default\"]();\ncy.visit(Cypress.env(\"url\"));\ncy.clickobject(homepage.Sourcebox());\ncy.wait(1000);\ncy.entervalue(homepage.Sourcebox(), this.data.source_city).should('include.value', 'Chennai');\ncy.clickobject(homepage.Destbox()); //querying through a List of webelements and matching with our string and choose it if found\n//cy.get('td[data-month=\"4\"]:visible').eq(13).contains(\"30\").click()\n//a.ui-state-default.ui-state-active\n//cy.clickobject(homepage.Calendar())\ncy.pickdate(this.data.Date_of_Travel); //This is a common method defined to pick date\n//adult\ncy.clickobject(homepage.Adultelement());\ncy.select_value_dropdown(homepage.Dom_Adultinsideelement(), this.data.No_of_Adults); //adding assertion to check selected value\nhomepage.Adultinsideelement().should('have.value', this.data.No_of_Adults);\ncy.clickobject(homepage.Adultelement()); //INR\ncy.select_value_dropdown(homepage.Currencytype(), this.data.currencyvalue); //cy.get('#ctl00_mainContent_DropDownListCurrency').select('INR')\ncy.clickobject(homepage.Findflightsbutton()); //Flight Selection Page\ncy.wait(5000);\ncy.click_radio_button(choosefare.Radiobutton_Fare());\ncy.get(choosefare.Radiobutton_Fare()).should('be.checked'); //choosefare.Continue_button().click({force:true})",
+              "err": {
+                "message": "Uncaught TypeError: Cannot read property 'get_Wrapper' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application",
+                "estack": "Uncaught TypeError: Cannot read property 'get_Wrapper' of undefined\n\nThis error originated from your application code, not from Cypress.\n\nWhen Cypress detects uncaught errors originating from your application it will automatically fail the current test.\n\nThis behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.\n\nhttps://on.cypress.io/uncaught-exception-from-application\n    at AjaxControlToolkit.TextBoxWatermarkBehavior.dispose (https://www.spicejet.com/ScriptResource.axd?d=bzTBMT5HsNVzhM55XKi9E6UvVOcYXMHBMZ5CLcFs-oQlk2bXU5ei01wGlcs3uRG96L9peacfYhvcVfIv5TZlMMl9VHqvaMNgMFkscKFwkKzwamwzfAHRtbTFXiHYifv0x5h7hxuZXXUdz-nHGxaV3E5OMi-g2p-lQqWL9wb4kA12nNRi0&t=3169528:135:46)\n    at Sys._Application.dispose (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:68258)\n    at Sys._Application._unloadHandler (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:72365)\n    at https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:307\n    at b (https://www.spicejet.com/ScriptResource.axd?d=J-w2Wuamp-465AD7hLvz-vf8Neii9qlBxJuEJZzc49Po1XGK3jWuUrf43JHxD1c0CCReG1_PdmMZqqgBHcrc_j6Ya0TeEkj36JeO1x5PjzVSb8FWO6Tqyzv7BncmOQTOEoq4FC1ckvX0OUq-fL90CLVPenE1&t=ffffffffecf19baa:5:57482)",
+                "diff": null
+              },
+              "uuid": "6ac961e9-481d-4dbb-9dd7-7e5272cbb4a9",
+              "parentUUID": "af619b36-0ac6-43af-9996-67f86b771b31",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0172736d-78b1-4c32-8148-61b93315571a",
+            "6ac961e9-481d-4dbb-9dd7-7e5272cbb4a9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 46798,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "5.1.0"
+    }
+  }
+}

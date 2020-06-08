@@ -1,0 +1,14 @@
+{
+  "numTestsKeptInMemory": 100,
+  "pageLoadTimeout":200000,
+  "screenshotsFolder": "cypress/screenshots",
+  "env": {
+    "url": "https://www.spicejet.com/"
+  },
+  "projectId": "2eywiv",
+  "reporter":"mochawesome",
+  "reporterOptions": {
+    "overwrite": false
+  },
+  "chromeWebSecurity": false
+}

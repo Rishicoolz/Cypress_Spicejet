@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2020-06-05T10:44:47.339Z",
+    "end": "2020-06-05T10:51:24.938Z",
+    "duration": 397599,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9165d880-cafb-4b5f-91ef-3b77afc228aa",
+      "title": "",
+      "fullFile": "cypress\\integration\\Examples\\Test.js",
+      "file": "cypress\\integration\\Examples\\Test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3add97fe-3922-4b08-85cb-7da5a04905bc",
+          "title": "Flight Ticket Booking",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify User can Login and Logout",
+              "fullTitle": "Flight Ticket Booking Verify User can Login and Logout",
+              "timedOut": null,
+              "duration": 110646,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"D:/Cypress_Project/cypress/screenshots/Examples\\\\Test.js/Flight Ticket Booking -- Verify User can Login and Logout (failed).png\"",
+              "code": "var loginpage = new _Loginpage[\"default\"](); //const encr = new Encrypt()\ncy.visit(Cypress.env(\"url\")); //console.log(encr.encrypt())\ncy.hoveroverelement(loginpage.LoginElement());\ncy.clickobject(loginpage.MemberLogin());\ncy.modify_dom_attribute(loginpage.Emailbox(), 'class', 'wHuge4s2 country-mobile country-mobile-login required isEmailInput error').wait(1000).type(this.data.email, {\n  log: false\n});\ncy.entervalue(loginpage.Passwordbox(), this.data.password);\ncy.modify_dom_attribute('form#SkySales', 'target', '_Self'); //cy.get('form#SkySales').invoke('attr','target','_Self')\ncy.clickobject(loginpage.Loginbutton());\ncy.clickobject(loginpage.Logoutbutton());",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#ControlGroupLoginView_MemberLoginView2LoginView_TextBoxUserID`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#ControlGroupLoginView_MemberLoginView2LoginView_TextBoxUserID`, but never found it.\n    at ensureExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (https://www.spicejet.com/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "45cbe59f-79a6-4ea0-8509-7ed0c71b0bd2",
+              "parentUUID": "3add97fe-3922-4b08-85cb-7da5a04905bc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Flights Availability and Fares in between Two Places",
+              "fullTitle": "Flight Ticket Booking Check Flights Availability and Fares in between Two Places",
+              "timedOut": null,
+              "duration": 222134,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"D:/Cypress_Project/cypress/screenshots/Examples\\\\Test.js/Flight Ticket Booking -- Check Flights Availability and Fares in between Two Places (failed).png\"",
+              "code": "var homepage = new _Homepage[\"default\"]();\nvar choosefare = new _Flightselectionpage[\"default\"]();\ncy.visit(Cypress.env(\"url\"));\ncy.clickobject(homepage.Sourcebox());\ncy.wait(1000);\ncy.entervalue(homepage.Sourcebox(), this.data.source_city).should('include.value', 'Chennai');\ncy.clickobject(homepage.Destbox()); //querying through a List of webelements and matching with our string and choose it if found\n//cy.get('td[data-month=\"4\"]:visible').eq(13).contains(\"30\").click()\n//a.ui-state-default.ui-state-active\n//cy.clickobject(homepage.Calendar())\ncy.pickdate(this.data.Date_of_Travel); //This is a common method defined to pick date\n//adult\ncy.clickobject(homepage.Adultelement());\ncy.select_value_dropdown(homepage.Dom_Adultinsideelement(), this.data.No_of_Adults); //adding assertion to check selected value\nhomepage.Adultinsideelement().should('have.value', this.data.No_of_Adults);\ncy.clickobject(homepage.Adultelement()); //INR\ncy.select_value_dropdown(homepage.Currencytype(), this.data.currencyvalue); //cy.get('#ctl00_mainContent_DropDownListCurrency').select('INR')\ncy.clickobject(homepage.Findflightsbutton()); //Flight Selection Page\ncy.wait(5000);\ncy.click_radio_button(choosefare.Radiobutton_Fare());\ncy.get(choosefare.Radiobutton_Fare()).should('be.checked'); //choosefare.Continue_button().click({force:true})",
+              "err": {
+                "message": "AssertionError: Timed out retrying: Expected to find element: `#ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare2_0`, but never found it.",
+                "estack": "AssertionError: Timed out retrying: Expected to find element: `#ControlGroupSelectView_AvailabilityInputSelectView_RadioButtonMkt1Fare2_0`, but never found it.\n    at ensureExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:137673:32)\n    at Object.ensureElExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:137691:12)\n    at ensureExistence (https://www.spicejet.com/__cypress/runner/cypress_runner.js:127867:23)\n    at onFailFn (https://www.spicejet.com/__cypress/runner/cypress_runner.js:127905:9)\n    at tryCatcher (https://www.spicejet.com/__cypress/runner/cypress_runner.js:9065:23)\n    at Promise._settlePromiseFromHandler (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7000:31)\n    at Promise._settlePromise (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7057:18)\n    at Promise._settlePromise0 (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7102:10)\n    at Promise._settlePromises (https://www.spicejet.com/__cypress/runner/cypress_runner.js:7178:18)\n    at _drainQueueStep (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3772:12)\n    at _drainQueue (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3765:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3781:5)\n    at Async.drainQueues (https://www.spicejet.com/__cypress/runner/cypress_runner.js:3651:14)",
+                "diff": null
+              },
+              "uuid": "708eb329-76d2-435b-8ef5-6f4baef0764f",
+              "parentUUID": "3add97fe-3922-4b08-85cb-7da5a04905bc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "45cbe59f-79a6-4ea0-8509-7ed0c71b0bd2",
+            "708eb329-76d2-435b-8ef5-6f4baef0764f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 332780,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false
+      },
+      "version": "5.1.0"
+    }
+  }
+}

@@ -54,7 +54,7 @@ else{
 
   const imageUrl = `D:/Cypress_Project/cypress/screenshots/${
     Cypress.spec.name
-  }/${fullTestName}.png`
+  }/${fullTestName} -- after each hook.png`
 
   addContext({ test }, imageUrl)
 }

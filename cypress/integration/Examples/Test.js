@@ -15,6 +15,9 @@ describe('Flight Ticket Booking',function()
         this.data = data}) 
         const util = require('util')          
     })
+    this.afterEach(function(){
+        cy.screenshot({capture:'runner'})
+    })
     after(function(){
         cy.exec('npm run Aftertest')
     })
@@ -41,7 +44,7 @@ it('Verify User can Login and Logout',function(){
         cy.clickobject(loginpage.Loginbutton())
 
         cy.clickobject(loginpage.Logoutbutton())
-        cy.screenshot({capture:'runner'})          
+              
         })
 
 it('Check Flights Availability and Fares in between Two Places',function(){
@@ -76,7 +79,6 @@ cy.wait(5000)
 cy.click_radio_button(choosefare.Radiobutton_Fare())
 cy.get(choosefare.Radiobutton_Fare()).should('be.checked')
 //choosefare.Continue_button().click({force:true})
-cy.screenshot({capture:'runner'})
     })
 
 

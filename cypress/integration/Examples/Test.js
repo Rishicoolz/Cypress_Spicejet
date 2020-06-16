@@ -40,7 +40,8 @@ it('Verify User can Login and Logout',function(){
         //cy.get('form#SkySales').invoke('attr','target','_Self')
         cy.clickobject(loginpage.Loginbutton())
 
-        cy.clickobject(loginpage.Logoutbutton())               
+        cy.clickobject(loginpage.Logoutbutton())
+        cy.screenshot({capture:'runner'})          
         })
 
 it('Check Flights Availability and Fares in between Two Places',function(){
@@ -75,7 +76,7 @@ cy.wait(5000)
 cy.click_radio_button(choosefare.Radiobutton_Fare())
 cy.get(choosefare.Radiobutton_Fare()).should('be.checked')
 //choosefare.Continue_button().click({force:true})
-
+cy.screenshot({capture:'runner'})
     })
 
 

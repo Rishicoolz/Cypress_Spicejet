@@ -10,10 +10,12 @@ var schema = {
       email: {
         //pattern: /^[a-zA-Z\s\-]+$/,
         message: 'Type your Email and press Enter Button',
-        required: true
+        required: true,
+        hidden: true
       },
       password: {
           message:'Type your Password and press Enter Button',
+          required: true,
             hidden: true
       }
     }

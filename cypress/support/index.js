@@ -37,7 +37,27 @@ Cypress.on('test:after:run', (test, runnable) => {
       }/${fullTestName} (failed).png`
   
       addContext({ test }, imageUrl)
-    }
+}
+else{
+  let item = runnable
+  const nameParts = [runnable.title]
+
+  // Iterate through all parents and grab the titles
+  while (item.parent) {
+    nameParts.unshift(item.parent.title)
+    item = item.parent
+  }
+
+  const fullTestName = nameParts
+          .filter(Boolean)
+          .join(' -- ')           // this is how cypress joins the test title fragments
+
+  const imageUrl = `D:/Cypress_Project/cypress/screenshots/${
+    Cypress.spec.name
+  }/${fullTestName}.png`
+
+  addContext({ test }, imageUrl)
+}
   })
 
 

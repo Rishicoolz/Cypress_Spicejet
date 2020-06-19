@@ -9,12 +9,16 @@ import IntlTelInput from 'intl-tel-input'
 describe('Flight Ticket Booking',function()
 
 {
+//This is executed once , after all the Tests in suite
+before(function(){
+    cy.exec('npm run Decrypt')
+})
 //This gets executed before each test in this Suite
     this.beforeEach(function(){
         //you have to resolve to access data by giving then
         cy.fixture("example").then(function(data){
         this.data = data}) 
-        const util = require('util')          
+        const util = require('util')     
     })
 //This gets executed at the end of each Test
     this.afterEach(function(){

@@ -6,11 +6,12 @@
   "scripts": {
     "open": ".\\node_modules\\.bin\\cypress open",
     "jenkins": ".\\node_modules\\.bin\\cypress run --spec cypress/integration/Examples/*",
-    "test": "npm run password && .\\node_modules\\.bin\\cypress run --spec cypress/integration/Examples/*",
+    "test": ".\\node_modules\\.bin\\cypress run --spec cypress/integration/Examples/*",
     "test_chrome_headed": "npm run test -- --browser chrome --reporter mochawesome --record --key 8320ee67-1ba0-49a9-8c80-0b067376d12d",
     "test_chrome_headless": "npm run test -- --headless --browser chrome --reporter mochawesome --record --key 8320ee67-1ba0-49a9-8c80-0b067376d12d",
     "password": "node password.js",
-    "Aftertest": "node AfterTest.js"
+    "Aftertest": "node AfterTest.js",
+    "Decrypt":"node Decrypt.js"
   },
   "author": "Rishi Bolisetty",
   "license": "ISC",

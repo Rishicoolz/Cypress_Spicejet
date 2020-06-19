@@ -3,7 +3,7 @@ const fileName = 'D:/Cypress_Project/cypress/fixtures/example.json';
 const file = require(fileName);
 
     
-    file.email = " "
+    //file.email = " "
     file.password = " "
 
 
